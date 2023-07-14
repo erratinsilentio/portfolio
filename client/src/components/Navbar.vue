@@ -1,12 +1,14 @@
 <script setup lang="ts">
+import { Page } from '../types/types'
+import { store } from '../store/store'
 </script>
 
 <template>
 <nav>
     <ul>
-        <li>About</li>
-        <li>Projects</li>
-        <li>Contact</li>
+        <li @click="store.setPage(Page.About)" :class="{current: store.page === Page.About}">{{ Page.About }}</li>
+        <li @click="store.setPage(Page.Projects)" :class="{current: store.page === Page.Projects}">{{ Page.Projects }}</li>
+        <li @click="store.setPage(Page.Contact)" :class="{current: store.page === Page.Contact}">{{ Page.Contact }}</li>
     </ul>
 </nav>
 </template>
@@ -36,18 +38,28 @@ ul{
 }
 
 li{
-    background-color: antiquewhite;
-    color: #1b1b1b;
+    color: antiquewhite;
     width: 90px;
     height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 200px;
+    cursor: pointer;
 
 }
 
 li:hover{
     background-color: #1b1b1b;
+}
+
+.current{
+    background-color: antiquewhite;
+    color: #1b1b1b;
+}
+
+.current:hover{
+    background-color: white;
+    transition-duration: 0.2s;
 }
 </style>

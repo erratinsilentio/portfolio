@@ -1,9 +1,10 @@
 export enum Page {
-  Home = "Home",
   About = "About",
+  Projects = "Projects",
   Contact = "Contact",
 }
 
 export interface Store {
   page: Page;
+  setPage: (arg: Page) => void;
 }
