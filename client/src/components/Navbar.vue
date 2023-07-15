@@ -4,27 +4,30 @@ import { store } from '../store/store'
 </script>
 
 <template>
-<nav>
-    <ul>
-        <li @click="store.setPage(Page.About)" :class="{ 'not': store.page !== Page.About }">{{ Page.About }}</li>
-        <li @click="store.setPage(Page.Projects)" :class="{ 'not': store.page !== Page.Projects }">{{ Page.Projects }}</li>
-        <li @click="store.setPage(Page.Contact)" :class="{ 'not': store.page !== Page.Contact }">{{ Page.Contact }}</li>
-        <li class="box" :class="{ 'left': store.page === Page.About, 'center': store.page === Page.Projects, 'right': store.page === Page.Contact }"></li>
-    </ul>
-</nav>
+    <nav>
+        <ul>
+            <li @click="store.setPage(Page.About)" :class="{ 'not': store.page !== Page.About }">{{ Page.About }}</li>
+            <li @click="store.setPage(Page.Projects)" :class="{ 'not': store.page !== Page.Projects }">{{ Page.Projects }}
+            </li>
+            <li @click="store.setPage(Page.Contact)" :class="{ 'not': store.page !== Page.Contact }">{{ Page.Contact }}</li>
+            <li class="box"
+                :class="{ 'left': store.page === Page.About, 'center': store.page === Page.Projects, 'right': store.page === Page.Contact }">
+            </li>
+        </ul>
+    </nav>
 </template>
 
 <style scoped>
-nav{
+nav {
     position: fixed;
     top: 80%;
     left: 50%;
-    transform: translate(-50%, -50%);    
+    transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
 }
 
-ul{
+ul {
     width: 300px;
     height: 50px;
     display: flex;
@@ -38,30 +41,30 @@ ul{
     padding: 0;
 }
 
-.box{
+.box {
     position: absolute;
     z-index: 0;
     top: 50%;
-    transform: translate(0%, -50%);    
+    transform: translate(0%, -50%);
     background-color: antiquewhite;
     transition: all 1s ease;
 }
 
-.left{
+.left {
     left: 2%;
 }
 
-.center{
+.center {
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
 }
 
-.right{
+.right {
     right: 2%;
 }
 
-li{
+li {
     z-index: 1;
     color: white;
     mix-blend-mode: difference;
@@ -74,10 +77,10 @@ li{
     cursor: pointer;
 
 }
-.not{
-}
 
-.not:hover{
+.not {}
+
+.not:hover {
     background-color: #1b1b1b;
 }
 </style>
