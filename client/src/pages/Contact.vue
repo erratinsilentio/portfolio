@@ -1,6 +1,8 @@
 <script setup lang="ts">
 </script>
 
-<template></template>
+<template>
+    <p>Contact</p>
+</template>
 
 <style scoped></style>

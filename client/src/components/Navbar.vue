@@ -20,6 +20,7 @@ import { store } from '../store/store'
 <style scoped>
 nav {
     position: fixed;
+    z-index: 3;
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -46,7 +47,7 @@ ul {
     z-index: 0;
     top: 50%;
     transform: translate(0%, -50%);
-    background-color: antiquewhite;
+    background-color: #0e7490;
     transition: all 1s ease;
 }
 
