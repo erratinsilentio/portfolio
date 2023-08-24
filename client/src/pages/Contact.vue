@@ -17,9 +17,20 @@
                 </section>
             </section>
             <label>Message</label>
-            <input type="textarea" class="area" />
+            <input type="text" class="area" />
         </form>
     </main>
+    <section class="footer">
+        <a href="https://github.com/erratinsilentio">
+            <img src="../assets/github.svg" alt="github" class="logo" />
+        </a>
+        <a href="https://www.linkedin.com/in/kacperkondracki/">
+            <img src="../assets/linkedin.svg" alt="linkedin" class="logo" />
+        </a>
+        <a href="mailto: kacper.kondracki@wp.pl">
+            <img src="../assets/email.svg" alt="email" class="logo" />
+        </a>
+    </section>
 </template>
 
 <style scoped>
@@ -90,6 +101,23 @@ label {
 .send:hover {
     background-color: #0891b2;
     color: #1b1b1b;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 5vh;
+    background-color: #155e75;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 22px;
+    height: 22px;
+    margin-right: 30px;
 }
 
 @keyframes appear {
