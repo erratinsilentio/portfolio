@@ -98,7 +98,7 @@ main {
 
 .arrow-btn {
     position: absolute;
-    bottom: 8%;
+    bottom: 7%;
     left: 50%;
     transform: translateX(-100%);
     background-color: transparent;
@@ -109,7 +109,7 @@ main {
     filter: invert(82%) sepia(25%) saturate(854%) hue-rotate(168deg) brightness(110%) contrast(98%);
     opacity: 0.5;
     transition-duration: 0.2s;
-    animation: blink 1s infinite;
+    animation: blink 1.2s infinite;
 }
 
 .arrow:hover {
