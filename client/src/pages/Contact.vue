@@ -101,6 +101,7 @@ label {
 .send:hover {
     background-color: #0891b2;
     color: #1b1b1b;
+    font-size: 42px;
 }
 
 .footer {

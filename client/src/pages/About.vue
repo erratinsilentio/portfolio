@@ -26,6 +26,9 @@ onMounted(() => {
             ( ...interested in backend technologies )
         </p>
         <div class="bg"></div>
+        <button class="arrow-btn">
+            <img src="../assets/arrow.svg" alt="arrow" class="arrow" />
+        </button>
     </main>
 </template>
 
@@ -93,6 +96,27 @@ main {
     background-position: 0 0, 32px 32px;
 }
 
+.arrow-btn {
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-100%);
+    background-color: transparent;
+}
+
+.arrow {
+    width: 50px;
+    filter: invert(82%) sepia(25%) saturate(854%) hue-rotate(168deg) brightness(110%) contrast(98%);
+    opacity: 0.5;
+    transition-duration: 0.2s;
+    animation: blink 1s infinite;
+}
+
+.arrow:hover {
+    transform: scale(1.5);
+    filter: invert(96%) sepia(92%) saturate(1863%) hue-rotate(172deg) brightness(101%) contrast(99%);
+}
+
 @keyframes appear {
     from {
         opacity: 0;
@@ -100,6 +124,21 @@ main {
 
     to {
         opacity: 1;
+    }
+}
+
+@keyframes blink {
+
+    0% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 0.5
+    }
+
+    100% {
+        opacity: 0
     }
 }
 </style>
