@@ -20,6 +20,8 @@
             <input type="text" class="area" />
         </form>
     </main>
+    <div class="bg"></div>
+
     <section class="footer">
         <a href="https://github.com/erratinsilentio">
             <img src="../assets/github.svg" alt="github" class="logo" />
@@ -39,7 +41,7 @@ main {
     height: 80vh;
     animation: appear 1s;
     position: relative;
-    z-index: 0;
+    z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,6 +69,7 @@ form {
     width: 60vw;
     display: flex;
     flex-direction: column;
+    z-index: 2;
 }
 
 label {
@@ -104,6 +107,21 @@ label {
     font-size: 42px;
 }
 
+.bg {
+    position: absolute;
+    z-index: 0;
+    bottom: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 400px;
+    background-color: #1b1b1b;
+    opacity: 0.3;
+    background-size: 18px 18px;
+    background-image: repeating-linear-gradient(0deg, #f472b6, #f472b6 0.9px, #1b1b1b 0.9px, #1b1b1b);
+    animation: roll 1s;
+}
+
 .footer {
     position: absolute;
     bottom: 0;
@@ -128,6 +146,16 @@ label {
 
     to {
         opacity: 1;
+    }
+}
+
+@keyframes roll {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 400px;
     }
 }
 </style>
