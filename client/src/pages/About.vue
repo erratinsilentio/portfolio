@@ -16,7 +16,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <main>
+    <main class="main-one">
         <p class="hello">Hello, I am...</p>
         <p class="developer">
             <span v-for="char in creative" ref="letter" class="creative">{{ char }}</span>
@@ -30,12 +30,24 @@ onMounted(() => {
             <img src="../assets/arrow.svg" alt="arrow" class="arrow" />
         </button>
     </main>
+    <main class="main-two">
+
+    </main>
 </template>
 
 <style scoped>
-main {
+.main-one {
     width: 100vw;
     height: 80vh;
+    padding: 50px;
+    animation: appear 1s;
+    position: relative;
+    z-index: 0;
+}
+
+.main-two {
+    width: 100vw;
+    height: 100vh;
     padding: 50px;
     animation: appear 1s;
     position: relative;
@@ -98,14 +110,14 @@ main {
 
 .arrow-btn {
     position: absolute;
-    bottom: 7%;
+    bottom: 8%;
     left: 50%;
     transform: translateX(-100%);
     background-color: transparent;
 }
 
 .arrow {
-    width: 50px;
+    width: 40px;
     filter: invert(82%) sepia(25%) saturate(854%) hue-rotate(168deg) brightness(110%) contrast(98%);
     opacity: 0.5;
     transition-duration: 0.2s;
