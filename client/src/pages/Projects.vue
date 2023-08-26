@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 import { Project } from "../types/types"
 
+const logos = ["nextjs", "typescript", "redux", "tailwind", "framer"]
 const project = ref(Project.SoulJournal)
 
 const setProject = (name: Project) => {
@@ -20,8 +21,18 @@ const setProject = (name: Project) => {
                 :class="{ chosen: project === Project.RoutineTracker }">{{ Project.RoutineTracker }}</button>
         </section>
         <section class="info">
-
+            <section class="left">
+                <a href="youtube.com" class="a-screen">
+                    <img src="../assets/souljournal.png" alt="project" class="screen" />
+                </a>
+                <div class="bg-img"></div>
+                <section class="logos">
+                    <img v-for="logo in  logos " :src="`/${logo}.svg`" alt="logo" class="logo" />
+                </section>
+            </section>
+            <section class="right"></section>
         </section>
+        <div class="bg"></div>
     </main>
 </template>
 
@@ -46,6 +57,7 @@ const setProject = (name: Project) => {
     display: flex;
     flex-direction: row;
     align-items: center;
+    z-index: 2;
 }
 
 .tab-btn {
@@ -71,6 +83,82 @@ const setProject = (name: Project) => {
     border-bottom: 2px solid white;
     width: 80vw;
     height: 70vh;
+    z-index: 2;
+    background-color: #1b1b1b;
+    display: flex;
+    flex-direction: row;
+}
+
+.left {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-top: 20px;
+    position: relative;
+    z-index: 0;
+}
+
+.bg-img {
+    position: absolute;
+    width: 89%;
+    height: 50%;
+    background-color: white;
+    top: 10%;
+    left: 10%;
+    z-index: 1;
+    background-color: #1b1b1b;
+    opacity: 0.7;
+    background: repeating-linear-gradient(-45deg, #cffafe, #cffafe 2px, #1b1b1b 2px, #1b1b1b 10px);
+}
+
+.logos {
+    width: 100%;
+    height: 80px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #27272a;
+    box-shadow: 2px 13px 36px -10px rgba(27, 27, 27, 1);
+
+}
+
+.logo {
+    width: 60px;
+}
+
+.right {
+    width: 50%;
+}
+
+.a-screen {
+    width: 90%;
+    z-index: 2;
+}
+
+.screen {
+    width: 100%;
+    z-index: 2;
+}
+
+.bg {
+    position: absolute;
+    z-index: 0;
+    bottom: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 350px;
+    background-color: #1b1b1b;
+    opacity: 0.3;
+    background-size: 21px 21px;
+    background-image: repeating-linear-gradient(45deg, #67e8f9 0, #67e8f9 2.1px, #1b1b1b 0, #1b1b1b 50%);
+
+    animation: roll 1s;
+
 }
 
 @keyframes appear {
@@ -80,6 +168,16 @@ const setProject = (name: Project) => {
 
     to {
         opacity: 1;
+    }
+}
+
+@keyframes roll {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100vw;
     }
 }
 </style>
