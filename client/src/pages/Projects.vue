@@ -1,11 +1,23 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+import { Project } from "../types/types"
+
+const project = ref(Project.SoulJournal)
+
+const setProject = (name: Project) => {
+    project.value = name
+    console.log(project.value)
+}
+
 </script>
 
 <template>
     <main class="main-one">
         <section class="tabs">
-            <button class="tab-btn">Soul Journal</button>
-            <button class="tab-btn">Routine Tracker</button>
+            <button v-on:click="setProject(Project.SoulJournal)" class="tab-btn"
+                :class="{ chosen: project === Project.SoulJournal }">{{ Project.SoulJournal }}</button>
+            <button v-on:click="setProject(Project.RoutineTracker)" class="tab-btn"
+                :class="{ chosen: project === Project.RoutineTracker }">{{ Project.RoutineTracker }}</button>
         </section>
         <section class="info">
 
@@ -41,10 +53,22 @@
     height: 50px;
     width: 200px;
     font-size: 24px;
+    background-color: #0891b2;
+}
+
+.tab-btn:hover {
+    filter: brightness(120%);
+}
+
+.chosen {
+    background-color: white;
+    outline: 1px solid white;
 }
 
 .info {
-    outline: 1px solid white;
+    border: 1px solid white;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
     width: 80vw;
     height: 70vh;
 }
