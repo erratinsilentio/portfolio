@@ -19,7 +19,7 @@ const toggleRedir = (visible: boolean) => {
                 <img v-if="redirVisible" src="/redirect.svg" alt="redirect" class="redir" />
 
             </a>
-            <div class="bg-img"></div>
+            <div class="bg-img" :class="{ lighter: redirVisible }"></div>
             <section class="technologies">
                 <p class="heading tech">#TECHNOLOGIES</p>
                 <section class="logos">
@@ -71,7 +71,7 @@ const toggleRedir = (visible: boolean) => {
 .bg-img {
     position: absolute;
     width: 89%;
-    height: 50%;
+    height: 47.5%;
     background-color: white;
     top: 10%;
     left: 10%;
@@ -79,6 +79,10 @@ const toggleRedir = (visible: boolean) => {
     background-color: #1b1b1b;
     opacity: 0.7;
     background: repeating-linear-gradient(-45deg, #cffafe, #cffafe 2px, #1b1b1b 2px, #1b1b1b 10px);
+}
+
+.lighter {
+    opacity: 1;
 }
 
 .redir {

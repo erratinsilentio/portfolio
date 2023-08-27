@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 import { Project } from "../types/types"
 import SoulJournal from "../components/SoulJournal.vue"
+import RoutineTracker from '../components/RoutineTracker.vue';
 
 const project = ref(Project.SoulJournal)
 
@@ -20,7 +21,12 @@ const setProject = (name: Project) => {
             <button v-on:click="setProject(Project.RoutineTracker)" class="tab-btn"
                 :class="{ chosen: project === Project.RoutineTracker }">{{ Project.RoutineTracker }}</button>
         </section>
-        <SoulJournal />
+        <template v-if="project == Project.SoulJournal">
+            <SoulJournal />
+        </template>
+        <template v-if="project == Project.RoutineTracker">
+            <RoutineTracker />
+        </template>
         <div class="bg"></div>
     </main>
 </template>
