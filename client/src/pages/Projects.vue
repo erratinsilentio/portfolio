@@ -26,11 +26,26 @@ const setProject = (name: Project) => {
                     <img src="../assets/souljournal.png" alt="project" class="screen" />
                 </a>
                 <div class="bg-img"></div>
-                <section class="logos">
-                    <img v-for="logo in  logos " :src="`/${logo}.svg`" alt="logo" class="logo" />
+                <section class="technologies">
+                    <p class="heading tech">#TECHNOLOGIES</p>
+                    <section class="logos">
+                        <img v-for="logo in  logos " :src="`/${logo}.svg`" alt="logo" class="logo" />
+                    </section>
                 </section>
             </section>
-            <section class="right"></section>
+            <section class="right">
+                <p class="heading">#ABOUT</p>
+                <p class="text">Digital version of my personal journaling schema, embracing the stoic principles of life.
+                </p>
+                <p class="heading">#WHY?</p>
+                <p class="text">Main idea was to explore Next.js with it's new app router, as well as to learn Tailwind CSS.
+                </p>
+                <p class="heading">#CHALLENGES</p>
+                <p class="text">Working with Postgresql database was new to me. I spent some time planning the tables and
+                    relations to
+                    make it fast and rational. Second biggest challenge was finishing the project - I mean spending enough
+                    time on the details, and not getting lost on the journey!</p>
+            </section>
         </section>
         <div class="bg"></div>
     </main>
@@ -82,7 +97,7 @@ const setProject = (name: Project) => {
     border-top: 2px solid white;
     border-bottom: 2px solid white;
     width: 80vw;
-    height: 70vh;
+    height: 75vh;
     z-index: 2;
     background-color: #1b1b1b;
     display: flex;
@@ -113,10 +128,22 @@ const setProject = (name: Project) => {
     background: repeating-linear-gradient(-45deg, #cffafe, #cffafe 2px, #1b1b1b 2px, #1b1b1b 10px);
 }
 
+.technologies {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.tech {
+    margin-left: 50px;
+}
+
 .logos {
     width: 100%;
     height: 80px;
-    margin-top: 50px;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -131,8 +158,23 @@ const setProject = (name: Project) => {
 }
 
 .right {
-    width: 50%;
+    width: 40%;
+    padding-left: 20px;
+    padding-right: 20px;
 }
+
+.text {
+    color: white;
+    font-size: 25px;
+    margin: 0px;
+}
+
+.heading {
+    color: #0891b2;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
 
 .a-screen {
     width: 90%;
