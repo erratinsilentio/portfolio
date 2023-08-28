@@ -47,13 +47,13 @@ const scrollToElement = () => {
                             class="green">Pizzerman</span>,
                         <span>Waiter</span>, <span class="red">Delivery man</span>
                     </p>
-                    <p class="description"><span class="learned">What I learned?</span> Many important and universal skills.
+                    <p class="description"><span class="blue">What I learned?</span> Many important and universal skills.
                         First of all
                         hard work,
                         often around 250 hours a month. I finally understood how important is working as a team. This leads
                         to
                         proper and honest communication, also with a client. Being patient and organized helps everyone.
-                        Especially important when you work under pressure of time (happens often in a restaurant).</p>
+                        Especially important when you work under the pressure of time (happens often in a restaurant).</p>
                 </article>
                 <article class="neuron">
                     <p class="title">* <span class="job">Neuron Foundation</span> - 2023.01 - 2023.06 -
@@ -68,6 +68,29 @@ const scrollToElement = () => {
             </section>
             <section class="right">
                 <p class="heading">#ABOUT MYSELF</p>
+                <article class="frontend">
+                    <p class="description-right">* My journey with <span class="green">programming</span> beginned in August
+                        2022</p>
+                    <p class="description-right">* What started as a career idea, became a <span class="blue">genuine
+                            passion</span></p>
+                    <p class="description-right">* I am curious about <span class="red">backend development</span>, there
+                        are many areas in IT that
+                        I
+                        want to get better at</p>
+                    <p class="description-right">* I enjoy <span class="green">helping other people</span> and don’t seek
+                        conflicts</p>
+                    <p class="description-right">* I have <span class="blue">2 cats</span>, that can’t wait till I start
+                        working from home</p>
+                    <p class="description-right">* I love <span class="red">music</span> and <span class="red">music
+                            production</span> - I recorded my first vocals when I was
+                        13
+                        years old</p>
+                    <p class="description-right">* <span class="blue">Mental challenges</span> keep me <span
+                            class="green">motivated</span> and <span class="green">disciplined</span></p>
+                    <p class="description-right">* Last year I ran an 85km <span class="red">ultramarathon</span></p>
+                    <p class="description-right">* My end goal is always becoming a <span class="blue">better human
+                            being</span></p>
+                </article>
             </section>
             <span class="border"></span>
             <img src="/pidzi3.svg" alt="cat" class="pidzi" />
@@ -214,6 +237,23 @@ const scrollToElement = () => {
     letter-spacing: 2px;
 }
 
+.description-right-p {
+    padding-right: 60px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    color: white;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.description-right {
+    padding-bottom: 10px;
+    font-size: 20px;
+    color: white;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
 .dev {
     margin-left: 60px;
 }
@@ -230,7 +270,7 @@ const scrollToElement = () => {
     text-decoration: underline;
 }
 
-.learned {
+.blue {
     color: #67e8f9;
 }
 
@@ -245,7 +285,8 @@ const scrollToElement = () => {
     width: 40%;
     min-height: 90%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .heading {
