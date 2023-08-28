@@ -42,6 +42,29 @@ const scrollToElement = () => {
         <section class="inside" ref="insideElement">
             <section class="left">
                 <p class="heading">#EXPERIENCE</p>
+                <article class="pizzeria">
+                    <p class="title">* <span class="job">Pizzeria Stopiatka</span> - 2020 till now - <span
+                            class="green">Pizzerman</span>,
+                        <span>Waiter</span>, <span class="red">Delivery man</span>
+                    </p>
+                    <p class="description"><span class="learned">What I learned?</span> Many important and universal skills.
+                        First of all
+                        hard work,
+                        often around 250 hours a month. I finally understood how important is working as a team. This leads
+                        to
+                        proper and honest communication, also with a client. Being patient and organized helps everyone.
+                        Especially important when you work under pressure of time (happens often in a restaurant).</p>
+                </article>
+                <article class="neuron">
+                    <p class="title">* <span class="job">Neuron Foundation</span> - 2023.01 - 2023.06 -
+                        <span class="green">Junior Frontend Developer</span>
+                    </p>
+                    <p class="description dev"><span class="learned">What I learned?</span> Working in a large codebase,
+                        created by many people. Scrum and kanban methodology, as well as working on a code with a team. I
+                        scratched the surface of new technologies like AWS, and felt comfortable with github workflow. I
+                        participated in meetings, where we discussed our tickets and future ideas.
+                    </p>
+                </article>
             </section>
             <section class="right">
                 <p class="heading">#ABOUT MYSELF</p>
@@ -166,7 +189,56 @@ const scrollToElement = () => {
     width: 40%;
     min-height: 90%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.pizzeria {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    color: white;
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.description {
+    font-size: 20px;
+    color: white;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.dev {
+    margin-left: 60px;
+}
+
+.green {
+    color: #22c55e;
+}
+
+.red {
+    color: #e11d48;
+}
+
+.job {
+    text-decoration: underline;
+}
+
+.learned {
+    color: #67e8f9;
+}
+
+.neuron {
+    margin-top: 30px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
 }
 
 .right {
