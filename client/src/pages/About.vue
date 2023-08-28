@@ -152,7 +152,7 @@ const scrollToElement = () => {
 
 .inside {
     position: relative;
-    min-width: 95vw;
+    min-width: 97vw;
     min-height: 95vh;
     background-color: #18181b;
     display: flex;
