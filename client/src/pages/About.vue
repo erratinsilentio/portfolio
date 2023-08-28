@@ -1,9 +1,10 @@
-<script setup lang="ts">
+<script setup>
 import { onMounted, ref } from 'vue';
 import gsap from "gsap";
 
 const creative = ['c', 'r', 'e', 'a', 't', 'i', 'v', 'e']
 const letter = ref(null)
+const targetElement = ref(null)
 
 onMounted(() => {
     gsap.to(letter.value, {
@@ -13,6 +14,12 @@ onMounted(() => {
         duration: .1,
     })
 })
+
+const scrollToElement = () => {
+    if (targetElement.value) {
+        targetElement.value.scrollIntoView({ behavior: 'smooth' });
+    }
+};
 </script>
 
 <template>
@@ -26,11 +33,11 @@ onMounted(() => {
             ( ...interested in backend technologies )
         </p>
         <div class="bg"></div>
-        <button class="arrow-btn">
+        <button class="arrow-btn" @click="scrollToElement">
             <img src="../assets/arrow.svg" alt="arrow" class="arrow" />
         </button>
     </main>
-    <main class="main-two">
+    <main class="main-two" ref="targetElement">
 
     </main>
 </template>
@@ -46,8 +53,8 @@ onMounted(() => {
 }
 
 .main-two {
-    width: 100vw;
-    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
     padding: 50px;
     animation: appear 1s;
     position: relative;

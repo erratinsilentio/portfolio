@@ -45,7 +45,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .top {
@@ -110,11 +109,9 @@ label {
 .bg {
     position: absolute;
     z-index: 0;
-    bottom: -50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 0;
     width: 100vw;
-    height: 400px;
+    height: 250px;
     background-color: #1b1b1b;
     opacity: 0.3;
     background-size: 18px 18px;
