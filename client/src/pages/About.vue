@@ -20,6 +20,7 @@ const scrollToElement = () => {
         targetElement.value.scrollIntoView({ behavior: 'smooth' });
     }
 };
+
 </script>
 
 <template>
@@ -38,7 +39,17 @@ const scrollToElement = () => {
         </button>
     </main>
     <main class="main-two" ref="targetElement">
-
+        <section class="inside" ref="insideElement">
+            <section class="left">
+                <p class="heading">#EXPERIENCE</p>
+            </section>
+            <section class="right">
+                <p class="heading">#ABOUT MYSELF</p>
+            </section>
+            <span class="border"></span>
+            <img src="/pidzi3.svg" alt="cat" class="pidzi" />
+            <img src="/pogo1.svg" alt="cat" class="pogi" />
+        </section>
     </main>
 </template>
 
@@ -55,10 +66,13 @@ const scrollToElement = () => {
 .main-two {
     min-width: 100vw;
     min-height: 100vh;
-    padding: 50px;
     animation: appear 1s;
     position: relative;
     z-index: 0;
+    background-color: #be185d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hello {
@@ -136,6 +150,67 @@ const scrollToElement = () => {
     filter: invert(96%) sepia(92%) saturate(1863%) hue-rotate(172deg) brightness(101%) contrast(99%);
 }
 
+.inside {
+    position: relative;
+    min-width: 95vw;
+    min-height: 95vh;
+    background-color: #18181b;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    /* animation: shorter 1s; */
+}
+
+.left {
+    width: 40%;
+    min-height: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.right {
+    width: 40%;
+    min-height: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.heading {
+    color: white;
+    height: 55px;
+    width: 200px;
+    text-align: center;
+    font-size: 40px;
+    border-bottom: 2px solid #be185d;
+}
+
+.border {
+    height: 75vh;
+    width: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #be185d;
+}
+
+.pidzi {
+    position: absolute;
+    bottom: 0;
+    left: -10px;
+    width: 200px;
+    filter: invert(25%) sepia(39%) saturate(3000%) hue-rotate(313deg) brightness(80%) contrast(106%);
+}
+
+.pogi {
+    position: absolute;
+    right: -30px;
+    top: -100px;
+    width: 300px;
+    filter: invert(25%) sepia(39%) saturate(3000%) hue-rotate(313deg) brightness(80%) contrast(106%);
+}
+
 @keyframes appear {
     from {
         opacity: 0;
@@ -158,6 +233,18 @@ const scrollToElement = () => {
 
     100% {
         opacity: 0
+    }
+}
+
+@keyframes shorter {
+    from {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    to {
+        width: 95vw;
+        height: 95vh;
     }
 }
 </style>
