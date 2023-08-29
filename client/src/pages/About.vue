@@ -59,7 +59,7 @@ const scrollToElement = () => {
                     <p class="title">* <span class="job">Neuron Foundation</span> - 2023.01 - 2023.06 -
                         <span class="green">Junior Frontend Developer</span>
                     </p>
-                    <p class="description dev"><span class="learned">What I learned?</span> Working in a large codebase,
+                    <p class="description dev"><span class="blue">What I learned?</span> Working in a large codebase,
                         created by many people. Scrum and kanban methodology, as well as working on a code with a team. I
                         scratched the surface of new technologies like AWS, and felt comfortable with github workflow. I
                         participated in meetings, where we discussed our tickets and future ideas.
@@ -87,7 +87,8 @@ const scrollToElement = () => {
                         years old</p>
                     <p class="description-right">* <span class="blue">Mental challenges</span> keep me <span
                             class="green">motivated</span> and <span class="green">disciplined</span></p>
-                    <p class="description-right">* Last year I ran an 85km <span class="red">ultramarathon</span></p>
+                    <p class="description-right">* Last year I ran an <span class="green">85km</span> <span
+                            class="red">ultramarathon</span></p>
                     <p class="description-right">* My end goal is always becoming a <span class="blue">better human
                             being</span></p>
                 </article>
