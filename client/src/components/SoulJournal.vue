@@ -29,16 +29,23 @@ const toggleRedir = (visible: boolean) => {
         </section>
         <section class="right">
             <p class="heading">#ABOUT</p>
-            <p class="text">Digital version of my personal journaling schema, embracing the stoic principles of life.
+            <p class="text">Digital version of my personal <span class="yellow">journaling schema</span>, embracing the
+                <span class="red">stoic</span>
+                principles of life.
                 <a href="https://github.com/erratinsilentio/Soul-Journal" target="_blank" class="github">open on github</a>
             </p>
             <p class="heading">#WHY?</p>
-            <p class="text">Main idea was to explore Next.js with it's new app router, as well as to learn Tailwind CSS.
+            <p class="text">Main idea was to explore <span class="yellow">Next.js</span> with it's new app router, as well
+                as
+                to learn <span class="blue">Tailwind CSS</span>.
             </p>
             <p class="heading">#CHALLENGES</p>
-            <p class="text">Working with Postgresql database was new to me. I spent some time planning the tables and
+            <p class="text">Working with <span class="yellow">Postgresql</span> database was new to me. I spent some time
+                planning the tables and
                 relations to
-                make it fast and rational. Second biggest challenge was finishing the project - I mean spending enough
+                make it fast and rational. Second biggest challenge was <span class="red">finishing</span> <span
+                    class="blue">the project</span> - I
+                mean spending enough
                 time on the details, but not getting lost on the journey!</p>
         </section>
     </section>
@@ -163,5 +170,21 @@ const toggleRedir = (visible: boolean) => {
 .screen {
     width: 100%;
     z-index: 2;
+}
+
+.green {
+    color: #22c55e;
+}
+
+.red {
+    color: #e11d48;
+}
+
+.yellow {
+    color: #fcd34d;
+}
+
+.blue {
+    color: #67e8f9;
 }
 </style>
