@@ -116,7 +116,7 @@ const scrollToElement = () => {
     animation: appear 1s;
     position: relative;
     z-index: 0;
-    background-color: #be185d;
+    background-color: #881337;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -205,8 +205,6 @@ const scrollToElement = () => {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    /* align-items: center; */
-    /* animation: shorter 1s; */
 }
 
 .left {
@@ -306,7 +304,7 @@ const scrollToElement = () => {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #be185d;
+    background-color: #881337;
 }
 
 .pidzi {
@@ -359,6 +357,332 @@ const scrollToElement = () => {
     to {
         width: 95vw;
         height: 95vh;
+    }
+}
+
+@media screen and (min-width: 561px) and (max-width: 1024px) {
+    .main-one {
+        padding: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .main-two {
+        min-width: 100vw;
+        min-height: 100vh;
+        animation: appear 1s;
+        position: relative;
+        z-index: 0;
+        background-color: #881337;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .hello {
+        text-align: center;
+        color: #06b6d4;
+        margin-top: 150px;
+        margin-bottom: 50px;
+        padding: 0;
+        padding-right: 200px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .developer {
+        margin: 0;
+        padding-left: 0;
+        text-align: center;
+        font-size: 65px;
+        padding-left: -100px;
+        margin-bottom: 0;
+        margin-top: 50px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .creative {
+        color: #be185d;
+        transform: translateY(115px);
+        transition: transform .5s;
+        position: relative;
+        z-index: 2;
+    }
+
+    .frontend {
+        margin-left: 20px;
+        margin-right: 20px;
+        color: #06b6d4;
+        position: relative;
+        z-index: 2;
+    }
+
+    .backend {
+        color: #0e7490;
+        font-size: 60px;
+        text-align: center;
+        margin: 0;
+        letter-spacing: 3px;
+        margin-top: 50px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .bg {
+        position: absolute;
+        z-index: 0;
+        top: 38%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 900px;
+        height: 400px;
+        background-color: #18181b;
+        opacity: 0.3;
+        background-image: radial-gradient(#fdba74 1.6px, transparent 1.6px), radial-gradient(#fdba74 1.6px, #18181b 1.6px);
+        background-size: 64px 64px;
+        background-position: 0 0, 32px 32px;
+    }
+
+    .arrow-btn {
+        position: absolute;
+        bottom: 15%;
+        left: 53%;
+        transform: translateX(-100%);
+        background-color: transparent;
+    }
+
+    .inside {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding-top: 20px;
+        position: relative;
+        min-width: 97vw;
+        min-height: 95vh;
+        background-color: #18181b;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left {
+        text-align: center;
+        width: 100%;
+        min-height: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        z-index: 2;
+    }
+
+    .neuron {
+        margin-top: 30px;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dev {
+        margin-left: 0px;
+    }
+
+    .right {
+        padding-top: 20px;
+        width: 100%;
+        min-height: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 120px;
+    }
+
+    .heading {
+        color: white;
+        height: 55px;
+        width: 200px;
+        text-align: center;
+        font-size: 40px;
+        border-bottom: 2px solid #be185d;
+    }
+
+    .border {
+        display: none;
+    }
+
+    .pidzi {
+        position: absolute;
+        bottom: 0px;
+        left: -30px;
+        width: 200px;
+        filter: invert(25%) sepia(39%) saturate(3000%) hue-rotate(313deg) brightness(80%) contrast(106%);
+    }
+
+    .pogi {
+        position: absolute;
+        right: -30px;
+        top: -90px;
+        width: 300px;
+        filter: invert(25%) sepia(39%) saturate(3000%) hue-rotate(313deg) brightness(80%) contrast(106%);
+    }
+}
+
+@media screen and (min-width: 390px) and (max-width: 560px) {
+
+    .main-one {
+        width: 100vw;
+        height: 90vh;
+        padding: 0;
+        animation: appear 1s;
+        position: relative;
+        z-index: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-two {
+        min-width: 100vw;
+        min-height: 100vh;
+        animation: appear 1s;
+        position: relative;
+        z-index: 0;
+        background-color: #881337;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .hello {
+        text-align: center;
+        color: #06b6d4;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding: 0;
+        padding-right: 200px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .developer {
+        margin: 0;
+        padding-left: 0;
+        text-align: center;
+        font-size: 65px;
+        padding-left: -100px;
+        margin-bottom: 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    .creative {
+        color: #be185d;
+        transform: translateY(115px);
+        transition: transform .5s;
+        position: relative;
+        z-index: 2;
+    }
+
+    .frontend {
+        margin-left: 20px;
+        margin-right: 20px;
+        color: #06b6d4;
+        position: relative;
+        z-index: 2;
+    }
+
+    .backend {
+        color: #0e7490;
+        font-size: 60px;
+        text-align: center;
+        margin: 0;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 50px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .arrow-btn {
+        position: absolute;
+        bottom: 5%;
+        left: 55%;
+        transform: translateX(-100%);
+        background-color: transparent;
+    }
+
+    .inside {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding-top: 20px;
+        position: relative;
+        min-width: 97vw;
+        min-height: 95vh;
+        background-color: #18181b;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left {
+        text-align: center;
+        width: 100%;
+        min-height: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        z-index: 2;
+    }
+
+    .neuron {
+        margin-top: 30px;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dev {
+        margin-left: 0px;
+    }
+
+    .right {
+        padding-top: 20px;
+        width: 100%;
+        min-height: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 120px;
+    }
+
+    .heading {
+        color: white;
+        height: 55px;
+        width: 200px;
+        text-align: center;
+        font-size: 40px;
+        border-bottom: 2px solid #be185d;
+    }
+
+    .border {
+        display: none;
+    }
+
+    .pidzi {
+        position: absolute;
+        bottom: 0px;
+        left: -30px;
+        width: 200px;
+        filter: invert(25%) sepia(39%) saturate(3000%) hue-rotate(313deg) brightness(80%) contrast(106%);
+    }
+
+    .pogi {
+        position: absolute;
+        right: -30px;
+        top: -90px;
+        width: 300px;
+        filter: invert(25%) sepia(39%) saturate(3000%) hue-rotate(313deg) brightness(80%) contrast(106%);
     }
 }
 </style>

@@ -79,9 +79,21 @@ li {
 
 }
 
-.not {}
-
 .not:hover {
     background-color: #1b1b1b;
+}
+
+
+
+@media screen and (min-width: 390px) and (max-width: 844px) {
+    nav {
+        position: fixed;
+        z-index: 3;
+        top: 88%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+    }
 }
 </style>
