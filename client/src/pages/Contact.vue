@@ -16,7 +16,7 @@
                 </section>
             </section>
             <label>Message</label>
-            <input type="text" class="area" />
+            <textarea class="area"></textarea>
         </form>
     </main>
     <div class="bg"></div>
@@ -78,14 +78,15 @@ label {
 .text {
     width: 400px;
     height: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     border-radius: 10px;
 }
 
 .area {
     height: 40vh;
     border-radius: 10px;
+    padding: 10px;
 }
 
 .send {

@@ -19,6 +19,24 @@ button {
 
 input {
   font-family: "Courier New", Courier, monospace;
+  border: 0;
+}
+
+/* Styles when input is focused */
+input:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 5px rgba(6, 182, 212, 0.5); /* Optional: Add a shadow effect */
+}
+
+textarea {
+  font-family: "Courier New", Courier, monospace;
+  border: 0;
+}
+
+/* Styles when input is focused */
+textarea:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 5px rgba(6, 182, 212, 0.5); /* Optional: Add a shadow effect */
 }
 
 a {
