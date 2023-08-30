@@ -3,7 +3,6 @@
 
 <template>
     <main>
-        <p>contact</p>
         <form>
             <section class="top">
                 <section class="top-left">
@@ -81,7 +80,7 @@ label {
     height: 30px;
     padding-left: 20px;
     padding-right: 20px;
-    border-radius: 100px;
+    border-radius: 10px;
 }
 
 .area {
@@ -153,6 +152,119 @@ label {
 
     to {
         height: 400px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .text {
+        width: 300px;
+        height: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 100px;
+    }
+}
+
+/* For resolution 390 x 844 */
+@media screen and (min-width: 390px) and (max-width: 844px) {
+    main {
+        width: 100vw;
+        height: 80vh;
+        animation: appear 1s;
+        position: relative;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .top-left {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .top-right {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        width: 50%;
+    }
+
+    form {
+        width: 95vw;
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+    }
+
+    label {
+        color: #06b6d4;
+        font-size: 24px;
+    }
+
+    .text {
+        width: 200px;
+        height: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .area {
+        height: 40vh;
+        border-radius: 10px;
+    }
+
+    .send {
+        border-radius: 10px;
+        width: 90%;
+        height: 75%;
+        background-color: #1b1b1b;
+        border: 2px solid #0891b2;
+        color: #0891b2;
+        font-size: 32px;
+        transition-duration: 0.1s;
+    }
+
+    .send:hover {
+        background-color: #0891b2;
+        color: #1b1b1b;
+        font-size: 42px;
+    }
+
+    .bg {
+        position: absolute;
+        z-index: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 250px;
+        background-color: #1b1b1b;
+        opacity: 0.3;
+        background-size: 18px 18px;
+        background-image: repeating-linear-gradient(0deg, #f472b6, #f472b6 0.9px, #1b1b1b 0.9px, #1b1b1b);
+        animation: roll 1s;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100vw;
+        height: 5vh;
+        background-color: #155e75;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo {
+        width: 22px;
+        height: 22px;
+        margin-right: 30px;
     }
 }
 </style>
