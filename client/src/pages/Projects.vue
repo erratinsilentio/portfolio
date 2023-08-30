@@ -108,4 +108,22 @@ const setProject = (name: Project) => {
         width: 100vw;
     }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {}
+
+/* For resolution 390 x 844 */
+@media screen and (min-width: 390px) and (max-width: 844px) {
+    .main-one {
+        width: 95vw;
+        height: 80vh;
+        animation: appear 1s;
+        position: relative;
+        z-index: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 10px;
+        margin-top: 20px;
+    }
+}
 </style>
