@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+
+const name = ref(null);
+const email = ref(null)
 </script>
 
 <template>
@@ -7,9 +11,9 @@
             <section class="top">
                 <section class="top-left">
                     <label>name</label>
-                    <input type="text" class="text" />
+                    <input type="text" class="text" v-model="name" />
                     <label>email</label>
-                    <input type="text" class="text" />
+                    <input type="text" class="text" v-model="email" />
                 </section>
                 <section class="top-right">
                     <button class="send">send</button>
