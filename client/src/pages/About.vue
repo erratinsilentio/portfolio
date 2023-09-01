@@ -179,7 +179,7 @@ const scrollToElement = () => {
 .arrow-btn {
     position: absolute;
     bottom: 8%;
-    left: 50%;
+    left: 48.5%;
     transform: translateX(-100%);
     background-color: transparent;
 }
