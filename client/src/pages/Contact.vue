@@ -1,13 +1,24 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import emailjs from '@emailjs/browser';
+
 
 const name = ref(null);
 const email = ref(null)
+
+const sendMessage = () => {
+    emailjs.sendForm(process.env.MAILJS_SERVICE_ID, process.env.MAILJS_TEMPLATE_ID, this.$refs.form, process.env.MAILJS_PUBLIC_KEY)
+        .then((result) => {
+            console.log('SUCCESS', result.text);
+        }, (error) => {
+            console.log("FAILED!", error.text)
+        })
+}
 </script>
 
 <template>
     <main>
-        <form>
+        <form ref="form" @submit.prevent="sendMessage">
             <section class="top">
                 <section class="top-left">
                     <label>name</label>
@@ -16,7 +27,7 @@ const email = ref(null)
                     <input type="text" class="text" v-model="email" />
                 </section>
                 <section class="top-right">
-                    <button class="send">send</button>
+                    <button class="send" type="submit">send</button>
                 </section>
             </section>
             <label>Message</label>
