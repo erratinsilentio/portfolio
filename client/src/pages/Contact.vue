@@ -27,16 +27,16 @@ const sendMessage = () => {
             <section class="top">
                 <section class="top-left">
                     <label>name</label>
-                    <input type="text" class="text" v-model="name" />
+                    <input type="text" class="text" v-model="name" name="from_name" id="from_name" />
                     <label>email</label>
-                    <input type="text" class="text" v-model="email" />
+                    <input type="text" class="text" v-model="email" name="email_id" id="email_id" />
                 </section>
                 <section class="top-right">
                     <button class="send" type="submit">send</button>
                 </section>
             </section>
             <label>Message</label>
-            <textarea class="area" v-model="message"></textarea>
+            <textarea class="area" v-model="message" name="message" id="message"></textarea>
         </form>
     </main>
     <div class="bg"></div>
