@@ -106,7 +106,7 @@ label {
     height: 30px;
     padding-left: 10px;
     padding-right: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .text:hover {
@@ -116,7 +116,7 @@ label {
 .area {
     height: 40vh;
     border-radius: 10px;
-    padding: 10px;
+    padding: 5px;
 }
 
 .area:hover {

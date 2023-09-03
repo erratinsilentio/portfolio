@@ -599,6 +599,7 @@ const scrollToElement = () => {
     }
 
     .developer {
+        width: 100%;
         margin: 0;
         padding-left: 0;
         letter-spacing: 3px;
