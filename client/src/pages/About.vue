@@ -27,7 +27,9 @@ const scrollToElement = () => {
     <main class="main-one">
         <p class="hello">Hello, I am...</p>
         <p class="developer">
-            <span v-for="char in creative" ref="letter" class="creative">{{ char }}</span>
+            <span class="container">
+                <div v-for="char in creative" ref="letter" class="creative">{{ char }}</div>
+            </span>
             <span class="frontend">frontend developer...</span>
         </p>
         <p class="backend">
@@ -135,6 +137,14 @@ const scrollToElement = () => {
     margin-bottom: 0;
     position: relative;
     z-index: 2;
+    display: flex;
+    flex-direction: row;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
 }
 
 .creative {
@@ -143,6 +153,8 @@ const scrollToElement = () => {
     transition: transform .5s;
     position: relative;
     z-index: 2;
+    margin: 0;
+    width: 20px;
 }
 
 .frontend {
@@ -174,6 +186,7 @@ const scrollToElement = () => {
     background-image: radial-gradient(#fdba74 1.6px, transparent 1.6px), radial-gradient(#fdba74 1.6px, #18181b 1.6px);
     background-size: 64px 64px;
     background-position: 0 0, 32px 32px;
+    animation: blink_slow 5s infinite;
 }
 
 .arrow-btn {
@@ -345,6 +358,21 @@ const scrollToElement = () => {
 
     100% {
         opacity: 0
+    }
+}
+
+@keyframes blink_slow {
+
+    0% {
+        opacity: 0.3
+    }
+
+    50% {
+        opacity: 0.5
+    }
+
+    100% {
+        opacity: 0.3
     }
 }
 
