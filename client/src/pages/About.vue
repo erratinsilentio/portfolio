@@ -186,7 +186,7 @@ const scrollToElement = () => {
     background-image: radial-gradient(#fdba74 1.6px, transparent 1.6px), radial-gradient(#fdba74 1.6px, #18181b 1.6px);
     background-size: 64px 64px;
     background-position: 0 0, 32px 32px;
-    animation: blink_slow 5s infinite;
+    animation: blink_slow 20s infinite;
 }
 
 .arrow-btn {
@@ -364,14 +364,17 @@ const scrollToElement = () => {
 @keyframes blink_slow {
 
     0% {
+        width: 900px;
         opacity: 0.3
     }
 
     50% {
+        width: 1100px;
         opacity: 0.5
     }
 
     100% {
+        width: 900px;
         opacity: 0.3
     }
 }
