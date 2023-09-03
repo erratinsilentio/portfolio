@@ -214,6 +214,7 @@ const scrollToElement = () => {
     position: relative;
     min-width: 97vw;
     min-height: 95vh;
+    height: 0;
     background-color: #18181b;
     display: flex;
     flex-direction: row;
