@@ -2,12 +2,17 @@
 import { ref } from 'vue';
 import emailjs from '@emailjs/browser';
 
+const form = ref(null)
+const name = ref('');
+const email = ref('')
+const message = ref('')
 
-const name = ref(null);
-const email = ref(null)
+const publicKey = import.meta.env.VITE_MAILJS_PUBLIC_KEY as string;
+const serviceID = import.meta.env.VITE_MAILJS_SERVICE_ID as string;
+const templateID = import.meta.env.VITE_MAILJS_TEMPLATE_ID as string;
 
 const sendMessage = () => {
-    emailjs.sendForm(process.env.MAILJS_SERVICE_ID, process.env.MAILJS_TEMPLATE_ID, this.$refs.form, process.env.MAILJS_PUBLIC_KEY)
+    emailjs.sendForm(serviceID, templateID, form.value, publicKey)
         .then((result) => {
             console.log('SUCCESS', result.text);
         }, (error) => {
@@ -31,7 +36,7 @@ const sendMessage = () => {
                 </section>
             </section>
             <label>Message</label>
-            <textarea class="area"></textarea>
+            <textarea class="area" v-model="message"></textarea>
         </form>
     </main>
     <div class="bg"></div>
