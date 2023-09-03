@@ -574,6 +574,8 @@ const scrollToElement = () => {
     }
 
     .main-two {
+        margin-top: 30px;
+        margin-bottom: 100px;
         min-width: 100vw;
         min-height: 100vh;
         animation: appear 1s;
@@ -599,12 +601,20 @@ const scrollToElement = () => {
     .developer {
         margin: 0;
         padding-left: 0;
+        letter-spacing: 3px;
         text-align: center;
         font-size: 65px;
         padding-left: -100px;
         margin-bottom: 0;
         position: relative;
         z-index: 2;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
     }
 
     .creative {
@@ -646,19 +656,20 @@ const scrollToElement = () => {
     .inside {
         margin-top: 30px;
         margin-bottom: 30px;
-        padding-top: 20px;
+        padding-top: 40px;
         position: relative;
         min-width: 97vw;
-        min-height: 95vh;
+        min-height: 185vh;
         background-color: #18181b;
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
     }
 
     .left {
         text-align: center;
         width: 100%;
-        min-height: 90%;
+        min-height: 50%;
         display: flex;
         flex-direction: column;
         align-items: center;

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Navbar from './components/Navbar.vue';
-import Header from './components/Header.vue'
+import Header from './components/Header.vue';
 import About from './pages/About.vue'
 import Projects from './pages/Projects.vue'
 import Contact from './pages/Contact.vue'
