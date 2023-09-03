@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import { store } from '../store/store';
+import { NotificationMessage } from '../types/types';
 import emailjs from '@emailjs/browser';
 
 const form = ref('')
@@ -13,8 +15,11 @@ const templateID = import.meta.env.VITE_MAILJS_TEMPLATE_ID as string;
 
 const sendMessage = () => {
     emailjs.sendForm(serviceID, templateID, form.value, publicKey)
-        .then((result) => {
-            console.log('SUCCESS', result.text);
+        .then(() => {
+            store.notificationStatus = NotificationMessage.SUCCESS
+            setTimeout(() => {
+                store.notificationStatus = NotificationMessage.NULL
+            }, 4000)
         }, (error) => {
             console.log("FAILED!", error.text)
         })
