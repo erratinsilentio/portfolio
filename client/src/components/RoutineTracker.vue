@@ -1,13 +1,24 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
+import gsap from "gsap";
 
 const logos = ["vue", "typescript", "vitejs", "gsap", "postgresql"]
 
 const redirVisible = ref(false);
+const logo = ref(null)
 
 const toggleRedir = (visible: boolean) => {
     redirVisible.value = visible;
 };
+
+onMounted(() => {
+    gsap.to(logo.value, {
+        opacity: 1,
+        stagger: 0.25,
+        delay: .2,
+        duration: .7,
+    })
+})
 </script>
 
 <template>
@@ -23,7 +34,7 @@ const toggleRedir = (visible: boolean) => {
             <section class="technologies">
                 <p class="heading tech">#TECHNOLOGIES</p>
                 <section class="logos">
-                    <img v-for=" logo  in  logos " :src="`/${logo}.svg`" alt="logo" class="logo" />
+                    <img v-for=" logo  in  logos " :src="`/${logo}.svg`" alt="logo" class="logo" ref="logo" />
                 </section>
             </section>
         </section>
@@ -126,11 +137,12 @@ const toggleRedir = (visible: boolean) => {
     justify-content: space-evenly;
     background-color: #27272a;
     box-shadow: 2px 13px 36px -10px rgba(27, 27, 27, 1);
-
+    overflow: hidden;
 }
 
 .logo {
     width: 60px;
+    opacity: 0;
 }
 
 .github {
