@@ -148,8 +148,8 @@ label {
     height: 250px;
     background-color: #1b1b1b;
     opacity: 0.3;
-    background-size: 18px 18px;
-    background-image: repeating-linear-gradient(0deg, #f472b6, #f472b6 0.9px, #1b1b1b 0.9px, #1b1b1b);
+    background-size: 12px 12px;
+    background-image: repeating-linear-gradient(45deg, #f472b6 0, #f472b6 1.2000000000000002px, #1b1b1b 0, #1b1b1b 50%);
     animation: roll 1s;
 }
 
@@ -186,7 +186,7 @@ label {
     }
 
     to {
-        height: 400px;
+        height: 250px;
     }
 }
 
