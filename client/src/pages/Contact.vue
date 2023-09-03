@@ -32,16 +32,16 @@ const sendMessage = () => {
             <section class="top">
                 <section class="top-left">
                     <label>name</label>
-                    <input type="text" class="text" v-model="name" name="from_name" id="from_name" />
+                    <input type="text" class="text" v-model="name" name="from_name" id="from_name" maxlength="30" />
                     <label>email</label>
-                    <input type="text" class="text" v-model="email" name="email_id" id="email_id" />
+                    <input type="text" class="text" v-model="email" name="email_id" id="email_id" maxlength="30" />
                 </section>
                 <section class="top-right">
                     <button class="send" type="submit">send</button>
                 </section>
             </section>
             <label>Message</label>
-            <textarea class="area" v-model="message" name="message" id="message"></textarea>
+            <textarea class="area" v-model="message" name="message" id="message" maxlength="500"></textarea>
         </form>
     </main>
     <div class="bg"></div>
@@ -108,10 +108,18 @@ label {
     border-radius: 10px;
 }
 
+.text:hover {
+    outline: 1px solid #06b6d4;
+}
+
 .area {
     height: 40vh;
     border-radius: 10px;
     padding: 10px;
+}
+
+.area:hover {
+    outline: 1px solid #06b6d4;
 }
 
 .send {
