@@ -6,4 +6,8 @@ export const store = reactive<Store>({
   setPage(arg: Page) {
     this.page = arg;
   },
+  notificationStatus: false,
+  setNotification(arg: Boolean) {
+    this.notificationStatus = arg;
+  },
 });

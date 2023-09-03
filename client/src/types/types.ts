@@ -7,6 +7,8 @@ export enum Page {
 export interface Store {
   page: Page;
   setPage: (arg: Page) => void;
+  notificationStatus: Boolean;
+  setNotification: (arg: Boolean) => void;
 }
 
 export enum Project {
