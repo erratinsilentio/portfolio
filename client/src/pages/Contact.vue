@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 import emailjs from '@emailjs/browser';
 
-const form = ref(null)
+const form = ref('')
 const name = ref('');
 const email = ref('')
 const message = ref('')
