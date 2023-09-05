@@ -116,7 +116,7 @@ label {
 .area {
     height: 40vh;
     border-radius: 10px;
-    padding: 5px;
+    padding: 15px;
 }
 
 .area:hover {
