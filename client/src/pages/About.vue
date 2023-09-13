@@ -393,6 +393,7 @@ const scrollToElement = () => {
 }
 
 @media screen and (min-width: 561px) and (max-width: 1024px) {
+
     .main-one {
         padding: 0;
         padding-left: 20px;
@@ -401,7 +402,7 @@ const scrollToElement = () => {
 
     .main-two {
         min-width: 100vw;
-        min-height: 100vh;
+        height: auto;
         animation: appear 1s;
         position: relative;
         z-index: 0;
@@ -425,7 +426,8 @@ const scrollToElement = () => {
     .developer {
         margin: 0;
         padding-left: 0;
-        text-align: center;
+        display: flex;
+        justify-content: center;
         font-size: 65px;
         padding-left: -100px;
         margin-bottom: 0;
@@ -479,7 +481,7 @@ const scrollToElement = () => {
     .arrow-btn {
         position: absolute;
         bottom: 15%;
-        left: 53%;
+        left: 51%;
         transform: translateX(-100%);
         background-color: transparent;
     }
@@ -490,7 +492,7 @@ const scrollToElement = () => {
         padding-top: 20px;
         position: relative;
         min-width: 97vw;
-        min-height: 95vh;
+        height: auto;
         background-color: #18181b;
         display: flex;
         flex-direction: column;
@@ -499,7 +501,7 @@ const scrollToElement = () => {
     .left {
         text-align: center;
         width: 100%;
-        min-height: 90%;
+        height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -521,12 +523,12 @@ const scrollToElement = () => {
     .right {
         padding-top: 20px;
         width: 100%;
-        min-height: 90%;
+        margin-bottom: 150px;
+        height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        margin-bottom: 120px;
     }
 
     .heading {
@@ -575,7 +577,6 @@ const scrollToElement = () => {
 
     .main-two {
         margin-top: 30px;
-        /* margin-bottom: 100px; */
         min-width: 100vw;
         min-height: 100vh;
         animation: appear 1s;
@@ -591,7 +592,7 @@ const scrollToElement = () => {
         text-align: center;
         color: #06b6d4;
         margin-top: 50px;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         padding: 0;
         padding-right: 200px;
         position: relative;
@@ -641,7 +642,7 @@ const scrollToElement = () => {
         margin: 0;
         margin-left: 20px;
         margin-right: 20px;
-        margin-top: 50px;
+        margin-top: 30px;
         position: relative;
         z-index: 2;
     }
