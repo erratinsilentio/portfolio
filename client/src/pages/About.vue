@@ -602,16 +602,15 @@ const scrollToElement = () => {
     .developer {
         width: 100%;
         margin: 0;
-        padding-left: 0;
         letter-spacing: 3px;
-        text-align: center;
         font-size: 65px;
-        padding-left: -100px;
         margin-bottom: 0;
         position: relative;
         z-index: 2;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        padding-left: 0;
     }
 
     .container {
@@ -628,11 +627,10 @@ const scrollToElement = () => {
     }
 
     .frontend {
-        margin-left: 20px;
-        margin-right: 20px;
         color: #06b6d4;
         position: relative;
         z-index: 2;
+        text-align: center;
     }
 
     .backend {

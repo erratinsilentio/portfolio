@@ -61,6 +61,7 @@ const setProject = (name: Project) => {
     width: 200px;
     font-size: 24px;
     background-color: #0891b2;
+    color: #1b1b1b;
 }
 
 .tab-btn:hover {

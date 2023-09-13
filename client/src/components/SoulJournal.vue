@@ -230,7 +230,7 @@ onMounted(() => {
         position: absolute;
         width: 87%;
         height: 60%;
-        background-color: white;
+        background-color: red;
         top: 10%;
         left: 10%;
         z-index: 1;
