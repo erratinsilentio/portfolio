@@ -141,7 +141,7 @@ onMounted(() => {
 
 .logo {
     width: 60px;
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 .github {
