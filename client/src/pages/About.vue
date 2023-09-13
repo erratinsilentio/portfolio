@@ -575,7 +575,7 @@ const scrollToElement = () => {
 
     .main-two {
         margin-top: 30px;
-        margin-bottom: 100px;
+        /* margin-bottom: 100px; */
         min-width: 100vw;
         min-height: 100vh;
         animation: appear 1s;
@@ -660,7 +660,7 @@ const scrollToElement = () => {
         padding-top: 40px;
         position: relative;
         min-width: 97vw;
-        min-height: 185vh;
+        height: auto;
         background-color: #18181b;
         display: flex;
         flex-direction: column;
