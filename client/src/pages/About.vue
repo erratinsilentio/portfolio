@@ -706,6 +706,7 @@ const scrollToElement = () => {
         position: relative;
         z-index: 2;
         text-align: center;
+        margin: 0;
     }
 
     .backend {
