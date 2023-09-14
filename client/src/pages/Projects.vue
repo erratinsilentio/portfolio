@@ -59,7 +59,7 @@ const setProject = (name: Project) => {
 .tab-btn {
     margin-right: 20px;
     height: 50px;
-    width: 200px;
+    min-width: 150px;
     font-size: 24px;
     background-color: #0891b2;
     color: #1b1b1b;

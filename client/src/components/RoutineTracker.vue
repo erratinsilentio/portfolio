@@ -406,5 +406,9 @@ onMounted(() => {
         width: 100%;
         z-index: 2;
     }
+
+    .github {
+        display: block;
+    }
 }
 </style>
