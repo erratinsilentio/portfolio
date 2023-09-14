@@ -2,6 +2,17 @@
 import { onMounted, ref } from 'vue';
 import gsap from "gsap";
 
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show')
+        } else {
+            entry.target.classList.remove('show')
+        }
+    })
+})
+
+
 const creative = ['c', 'r', 'e', 'a', 't', 'i', 'v', 'e']
 const letter = ref(null)
 const targetElement = ref(null)
@@ -13,6 +24,9 @@ onMounted(() => {
         delay: .7,
         duration: .1,
     })
+
+    const hiddenElements = document.querySelectorAll('.hidden')
+    hiddenElements.forEach((el) => observer.observe(el))
 })
 
 const scrollToElement = () => {
@@ -25,7 +39,8 @@ const scrollToElement = () => {
 
 <template>
     <main class="main-one">
-        <p class="hello">Hello, I am...</p>
+        <p class="hello" v-motion :initial="{ opacity: 0, y: 100 }" :enter="{ opacity: 1, y: 0, scale: 1 }"
+            :variants="{ custom: { scale: 2 } }" :hovered="{ scale: 1.2 }" :delay="200">Hello, I am...</p>
         <p class="developer">
             <span class="container">
                 <div v-for="char in creative" ref="letter" class="creative">{{ char }}</div>
@@ -43,13 +58,14 @@ const scrollToElement = () => {
     <main class="main-two" ref="targetElement">
         <section class="inside" ref="insideElement">
             <section class="left">
-                <p class="heading">#EXPERIENCE</p>
+                <p class="heading hidden">#EXPERIENCE</p>
                 <article class="pizzeria">
-                    <p class="title">* <span class="job">Pizzeria Stopiatka</span> - 2020 till now - <span
+                    <p class="title hidden">* <span class="job">Pizzeria Stopiatka</span> - 2020 till now - <span
                             class="green">Pizzerman</span>,
                         <span>Waiter</span>, <span class="red">Delivery man</span>
                     </p>
-                    <p class="description"><span class="blue">What I learned?</span> Many important and universal skills.
+                    <p class="description hidden"><span class="blue">What I learned?</span> Many important and universal
+                        skills.
                         First of all
                         hard work,
                         often around 250 hours a month. I finally understood how important is working as a team. This leads
@@ -58,10 +74,10 @@ const scrollToElement = () => {
                         Especially important when you work under the pressure of time (happens often in a restaurant).</p>
                 </article>
                 <article class="neuron">
-                    <p class="title">* <span class="job">Neuron Foundation</span> - 2023.01 - 2023.06 -
+                    <p class="title hidden">* <span class="job">Neuron Foundation</span> - 2023.01 - 2023.06 -
                         <span class="green">Junior Frontend Developer</span>
                     </p>
-                    <p class="description dev"><span class="blue">What I learned?</span> Working in a large codebase,
+                    <p class="description dev hidden"><span class="blue">What I learned?</span> Working in a large codebase,
                         created by many people. Scrum and kanban methodology, as well as working on a code with a team. I
                         scratched the surface of new technologies like AWS, and felt comfortable with github workflow. I
                         participated in meetings, where we discussed our tickets and future ideas.
@@ -69,29 +85,33 @@ const scrollToElement = () => {
                 </article>
             </section>
             <section class="right">
-                <p class="heading">#ABOUT MYSELF</p>
+                <p class="heading hidden">#ABOUT MYSELF</p>
                 <article class="frontend">
-                    <p class="description-right">* My journey with <span class="green">programming</span> beginned in August
+                    <p class="description-right hidden">* My journey with <span class="green">programming</span> beginned in
+                        August
                         2022</p>
-                    <p class="description-right">* What started as a career idea, became a <span class="blue">genuine
+                    <p class="description-right hidden">* What started as a career idea, became a <span class="blue">genuine
                             passion</span></p>
-                    <p class="description-right">* I am curious about <span class="red">backend development</span>, there
+                    <p class="description-right hidden">* I am curious about <span class="red">backend development</span>,
+                        there
                         are many areas in IT that
                         I
                         want to get better at</p>
-                    <p class="description-right">* I enjoy <span class="green">helping other people</span> and don’t seek
+                    <p class="description-right hidden">* I enjoy <span class="green">helping other people</span> and don’t
+                        seek
                         conflicts</p>
-                    <p class="description-right">* I have <span class="blue">2 cats</span>, that can’t wait till I start
+                    <p class="description-right hidden">* I have <span class="blue">2 cats</span>, that can’t wait till I
+                        start
                         working from home</p>
-                    <p class="description-right">* I love <span class="red">music</span> and <span class="red">music
+                    <p class="description-right hidden">* I love <span class="red">music</span> and <span class="red">music
                             production</span> - I recorded my first vocals when I was
                         13
                         years old</p>
-                    <p class="description-right">* <span class="blue">Mental challenges</span> keep me <span
+                    <p class="description-right hidden">* <span class="blue">Mental challenges</span> keep me <span
                             class="green">motivated</span> and <span class="green">disciplined</span></p>
-                    <p class="description-right">* Last year I ran an <span class="green">85km</span> <span
+                    <p class="description-right hidden">* Last year I ran an <span class="green">85km</span> <span
                             class="red">ultramarathon</span></p>
-                    <p class="description-right">* My end goal is always becoming a <span class="blue">better human
+                    <p class="description-right hidden">* My end goal is always becoming a <span class="blue">better human
                             being</span></p>
                 </article>
             </section>
@@ -335,6 +355,65 @@ const scrollToElement = () => {
     top: -100px;
     width: 300px;
     filter: invert(25%) sepia(39%) saturate(3000%) hue-rotate(313deg) brightness(80%) contrast(106%);
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+.description-right:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.description-right:nth-child(3) {
+    transition-delay: 300ms;
+}
+
+.description-right:nth-child(4) {
+    transition-delay: 400ms;
+}
+
+.description-right:nth-child(5) {
+    transition-delay: 500ms;
+}
+
+.description-right:nth-child(6) {
+    transition-delay: 600ms;
+}
+
+.description-right:nth-child(7) {
+    transition-delay: 700ms;
+}
+
+.description-right:nth-child(8) {
+    transition-delay: 800ms;
+}
+
+.description-right:nth-child(9) {
+    transition-delay: 900ms;
+}
+
+.title:nth-child(2) {
+    transition-delay: 400ms;
+}
+
+.description:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
 }
 
 @keyframes appear {
