@@ -11,6 +11,7 @@ const setProject = (name: Project) => {
     console.log(project.value)
 }
 
+
 </script>
 
 <template>

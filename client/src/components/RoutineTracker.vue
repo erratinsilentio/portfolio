@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
 import gsap from "gsap";
+import { observer } from "../utils/observer"
+
 
 const logos = ["vue", "typescript", "vitejs", "gsap", "postgresql"]
 
@@ -18,6 +20,9 @@ onMounted(() => {
         delay: .2,
         duration: .7,
     })
+
+    const hiddenElements = document.querySelectorAll('.hidden')
+    hiddenElements.forEach((el) => observer.observe(el))
 })
 </script>
 
@@ -40,19 +45,20 @@ onMounted(() => {
         </section>
         <section class="right">
             <p class="heading">#ABOUT</p>
-            <p class="text">This is a <span class="yellow">workout logger</span>, with a section dedicated to each exercise
+            <p class="text hidden">This is a <span class="yellow">workout logger</span>, with a section dedicated to each
+                exercise
                 used in a training plan.
                 <a href="https://github.com/erratinsilentio/routine-tracker" target="_blank" class="github">open on
                     github</a>
             </p>
             <p class="heading">#WHY?</p>
-            <p class="text">I wanted to learn <span class="green">Vue.js</span>, and familiarize myself with
+            <p class="text hidden">I wanted to learn <span class="green">Vue.js</span>, and familiarize myself with
                 <span class="red">bodyweight</span>
                 <span class="blue"> training exercises</span> at the same
                 time.
             </p>
             <p class="heading">#CHALLENGES</p>
-            <p class="text">Once again, creating <span class="yellow">tables </span> with <span class="blue">clear
+            <p class="text hidden">Once again, creating <span class="yellow">tables </span> with <span class="blue">clear
                     relations</span>
                 for the data of each workout. Challenge was to
                 make <span class="red">request number</span> as low as possible for each workout creation. Now if I had to
@@ -65,6 +71,19 @@ onMounted(() => {
 </template>
 
 <style scoped>
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
 .info {
     border: 1px solid white;
     border-top: 2px solid white;

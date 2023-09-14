@@ -1,16 +1,7 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 import gsap from "gsap";
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show')
-        } else {
-            entry.target.classList.remove('show')
-        }
-    })
-})
+import { observer } from "../utils/observer"
 
 
 const creative = ['c', 'r', 'e', 'a', 't', 'i', 'v', 'e']
@@ -21,7 +12,7 @@ onMounted(() => {
     gsap.to(letter.value, {
         y: 0,
         stagger: 0.05,
-        delay: .7,
+        delay: .3,
         duration: .1,
     })
 
@@ -47,7 +38,7 @@ const scrollToElement = () => {
             </span>
             <span class="frontend">frontend developer...</span>
         </p>
-        <p class="backend">
+        <p class="backend hidden">
             ( ...interested in backend technologies )
         </p>
         <div class="bg"></div>
@@ -404,6 +395,11 @@ const scrollToElement = () => {
 
 .title:nth-child(2) {
     transition-delay: 400ms;
+}
+
+.backend {
+    transition-delay: 910ms;
+
 }
 
 .description:nth-child(2) {

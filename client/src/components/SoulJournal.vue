@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
 import gsap from "gsap";
+import { observer } from "../utils/observer"
 
 const logos = ["nextjs", "typescript", "redux", "tailwind", "framer"]
 
@@ -18,6 +19,9 @@ onMounted(() => {
         delay: .2,
         duration: .7,
     })
+
+    const hiddenElements = document.querySelectorAll('.hidden')
+    hiddenElements.forEach((el) => observer.observe(el))
 })
 </script>
 
@@ -40,18 +44,21 @@ onMounted(() => {
         </section>
         <section class="right">
             <p class="heading">#ABOUT</p>
-            <p class="text">Digital version of my personal <span class="yellow">journaling schema</span>, embracing the
+            <p class="text hidden">Digital version of my personal <span class="yellow">journaling schema</span>, embracing
+                the
                 <span class="red">stoic</span>
                 principles of life.
                 <a href="https://github.com/erratinsilentio/Soul-Journal" target="_blank" class="github">open on github</a>
             </p>
             <p class="heading">#WHY?</p>
-            <p class="text">Main idea was to explore <span class="yellow">Next.js</span> with it's new app router, as well
+            <p class="text hidden">Main idea was to explore <span class="yellow">Next.js</span> with it's new app router, as
+                well
                 as
                 to learn <span class="blue">Tailwind CSS</span>.
             </p>
             <p class="heading">#CHALLENGES</p>
-            <p class="text">Working with <span class="yellow">Postgresql</span> database was new to me. I spent some time
+            <p class="text hidden">Working with <span class="yellow">Postgresql</span> database was new to me. I spent some
+                time
                 planning the tables and
                 relations to
                 make it fast and rational. Second biggest challenge was <span class="red">finishing</span> <span
@@ -63,6 +70,19 @@ onMounted(() => {
 </template>
 
 <style scoped>
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
 .info {
     border: 1px solid white;
     border-top: 2px solid white;
@@ -386,5 +406,4 @@ onMounted(() => {
         width: 100%;
         z-index: 2;
     }
-}
-</style>
+}</style>
