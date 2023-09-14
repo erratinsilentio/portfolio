@@ -209,6 +209,7 @@ const scrollToElement = () => {
 }
 
 .arrow {
+    transform: translateZ(0);
     width: 40px;
     filter: invert(82%) sepia(25%) saturate(854%) hue-rotate(168deg) brightness(110%) contrast(98%);
     opacity: 0.5;
@@ -218,7 +219,6 @@ const scrollToElement = () => {
 
 .arrow:hover {
     transform: scale(1.5);
-    filter: invert(96%) sepia(92%) saturate(1863%) hue-rotate(172deg) brightness(101%) contrast(99%);
 }
 
 .inside {
@@ -337,7 +337,7 @@ const scrollToElement = () => {
     bottom: 0;
     left: -10px;
     width: 200px;
-    filter: invert(25%) sepia(39%) saturate(3000%) hue-rotate(313deg) brightness(80%) contrast(106%);
+    /* filter: invert(25%) sepia(39%) saturate(3000%) hue-rotate(313deg) brightness(80%) contrast(106%); */
 }
 
 .pogi {
@@ -345,7 +345,7 @@ const scrollToElement = () => {
     right: -30px;
     top: -100px;
     width: 300px;
-    filter: invert(25%) sepia(39%) saturate(3000%) hue-rotate(313deg) brightness(80%) contrast(106%);
+    /* filter: invert(25%) sepia(39%) saturate(3000%) hue-rotate(313deg) brightness(80%) contrast(106%); */
 }
 
 .hidden {
