@@ -110,7 +110,7 @@ label {
 }
 
 .text:hover {
-    outline: 1px solid #06b6d4;
+    /* outline: 1px solid #06b6d4; */
 }
 
 .area {
@@ -120,7 +120,7 @@ label {
 }
 
 .area:hover {
-    outline: 1px solid #06b6d4;
+    /* outline: 1px solid #06b6d4; */
 }
 
 .send {
